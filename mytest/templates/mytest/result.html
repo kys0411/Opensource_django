@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+</head>
+<body style="text-align: center;">
+<fieldset>
+    {% if is_result %}
+        <h1>{{ question }} result</h1>
+        {% if answer_result %}
+            <h3>정답입니다 </h3>
+        {% else %}
+            <h3>오답입니다 </h3>
+        {% endif %}
+    {% else %}
+        <h2>아직 응시하지 않은 문제입니다.</h2>
+    {% endif %}
+    <a href="/"><input type="button" value="돌아가기"></a>
+</fieldset>
+
+</body>
+</html>
